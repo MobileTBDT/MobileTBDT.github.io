@@ -215,20 +215,47 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    padding: 20px;
 }
 
 .tech-item {
     background: white;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
+    /* Đặt chiều cao cố định để các ô đều nhau */
+    height: 220px; 
+    border-radius: 20px; /* Bo tròn nhiều hơn chút cho mềm mại */
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Hiệu ứng nảy khi hover */
+    
+    /* Căn giữa hình ảnh tuyệt đối */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Đổi con trỏ chuột thành hình bàn tay */
+}
+
+/* Hiệu ứng khi di chuột vào ô */
+.tech-item:hover {
+    transform: translateY(-10px); /* Nhấc ô lên cao một chút */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* Định dạng Logo TO */
+.tech-logo {
+    /* Cho phép ảnh to tối đa 70% chiều rộng hoặc chiều cao của ô chứa */
+    max-width: 70%; 
+    max-height: 70%;
+    width: auto;
+    height: auto;
+    
+    object-fit: contain; /* Giữ nguyên tỉ lệ ảnh, không bị méo */
+    filter: grayscale(20%); /* (Tùy chọn) Làm màu trầm đi một chút */
     transition: all 0.3s ease;
 }
 
-.tech-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+/* Khi hover vào ô thì logo sáng lên và to thêm chút nữa */
+.tech-item:hover .tech-logo {
+    filter: grayscale(0%); /* Về màu gốc rực rỡ */
+    transform: scale(1.1); /* Phóng to logo thêm 10% */
 }
 
 .tech-label {
@@ -239,6 +266,7 @@ section {
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
+
 
 .tech-name {
     font-size: 1.5rem;

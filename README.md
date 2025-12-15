@@ -85,7 +85,7 @@
          <li>1. Lương Thanh Tùng- Vai trò: [Backend Developer / Leader]</li>
          <li>2. Nguyễn Trần Đông - Vai trò: [Frontend Developer / UI-UX Design]</li>
          <li>3. Nguyễn Đình Bằng - Vai trò: [Frontend Developer / Documentation]</li>
-         <li>4. Đặng Nguyễn Minh Thư - Vai trò: [Tester / Documentation] </li>
+         <li>4. Đặng Nguyễn Minh Thư - Vai trò: [Frontend Developer / Documentation] </li>
          </ul>
      </div>
    </section>
